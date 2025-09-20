@@ -7,5 +7,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     open: true
-  }
+  },
+  base: import.meta.env.VITE_BASE_PATH  || "/SocialApp"
 })
