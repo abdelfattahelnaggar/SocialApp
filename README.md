@@ -4,13 +4,16 @@ A modern social media application built with React, featuring a clean and respon
 
 ## ✨ Features
 
-- 🔐 **Authentication System** - User login and registration
+- 🔐 **Authentication System** - User login and registration with form validation
 - 📱 **Responsive Design** - Works seamlessly on all devices
 - 🏠 **Feed Page** - View and interact with posts
 - 👤 **Profile Management** - User profile pages
 - 📝 **Post Details** - Detailed view of individual posts
 - 🎨 **Modern UI** - Built with HeroUI and Tailwind CSS
 - ⚡ **Fast Performance** - Powered by Vite
+- 🍞 **Toast Notifications** - Beautiful user feedback with react-toastify
+- ✅ **Form Validation** - Real-time validation with Zod and react-hook-form
+- 🎭 **Glass Morphism** - Modern design with backdrop blur effects
 
 ## 🛠️ Tech Stack
 
@@ -22,6 +25,10 @@ A modern social media application built with React, featuring a clean and respon
 - **Animations:** Framer Motion
 - **HTTP Client:** Axios
 - **Icons:** FontAwesome
+- **Form Management:** React Hook Form
+- **Validation:** Zod
+- **Notifications:** React Toastify
+- **Environment:** Vite Environment Variables
 
 ## 🚀 Getting Started
 
@@ -35,7 +42,7 @@ Make sure you have Node.js installed on your machine:
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/abdelfattahelnaggar/SocialApp.git
    cd SocialApp
    ```
 
@@ -44,12 +51,18 @@ Make sure you have Node.js installed on your machine:
    npm install
    ```
 
-3. **Start the development server**
+3. **Set up environment variables**
+   ```bash
+   # Create .local.env file in the root directory
+   echo "VITE_BASE_URL=https://linked-posts.routemisr.com" > .local.env
+   ```
+
+4. **Start the development server**
    ```bash
    npm run dev
    ```
 
-4. **Open your browser**
+5. **Open your browser**
    
    Navigate to `http://localhost:5173` to view the application
 
@@ -65,10 +78,14 @@ src/
 ├── pages/              # Page components
 │   ├── FeedPage.jsx    # Main feed page
 │   ├── LoginPage.jsx   # User login page
-│   ├── RegisterPage.jsx # User registration page
+│   ├── RegisterPage.jsx # User registration page with validation
 │   ├── ProfilePage.jsx # User profile page
 │   ├── PostDetailsPage.jsx # Individual post details
 │   └── NotFoundPage.jsx # 404 error page
+├── Services/           # API services
+│   └── authServices.js # Authentication API calls
+├── Schemas/            # Validation schemas
+│   └── registerSchema.js # Zod validation schema
 ├── assets/             # Static assets
 ├── App.jsx             # Main application component
 ├── main.jsx           # Application entry point
@@ -92,9 +109,16 @@ The application uses React Router with the following routes:
 - `/profile` - User profile
 - `/post-details` - Post details view
 
-## 🎨 UI Components
+## 🎨 UI Components & Design
 
-This project uses **HeroUI** for consistent and modern UI components along with **Tailwind CSS** for styling. The design is fully responsive and includes smooth animations powered by **Framer Motion**.
+This project uses **HeroUI** for consistent and modern UI components along with **Tailwind CSS** for styling. The design features:
+
+- **Glass Morphism Effects** - Semi-transparent backgrounds with backdrop blur
+- **Gradient Backgrounds** - Beautiful blue-to-indigo gradients
+- **Form Validation** - Real-time validation with error states
+- **Toast Notifications** - Interactive feedback with react-toastify
+- **Responsive Design** - Mobile-first approach with smooth animations
+- **Modern Typography** - Gradient text effects and clean fonts
 
 ## 📱 Responsive Design
 
@@ -109,6 +133,17 @@ The project is configured with:
 - **Vite** for fast development and building
 - **ESLint** for code quality and consistency
 - **Tailwind CSS** for utility-first styling
+- **Environment Variables** for API configuration
+- **Zod** for runtime type validation
+- **React Hook Form** for efficient form handling
+
+## 🔌 API Integration
+
+The application integrates with a backend API:
+- **Base URL**: `https://linked-posts.routemisr.com`
+- **Authentication**: User registration via `/users/signup` endpoint
+- **Error Handling**: Comprehensive error handling with user-friendly messages
+- **Loading States**: Visual feedback during API calls
 
 ## 🤝 Contributing
 
@@ -125,6 +160,10 @@ The project is configured with:
 - [HeroUI](https://heroui.com/) - UI component library
 - [Tailwind CSS](https://tailwindcss.com/) - For styling
 - [Vite](https://vitejs.dev/) - Build tool and development server
+- [React Hook Form](https://react-hook-form.com/) - Form management
+- [Zod](https://zod.dev/) - Schema validation
+- [React Toastify](https://fkhadra.github.io/react-toastify/) - Toast notifications
+- [Axios](https://axios-http.com/) - HTTP client
 
 ---
 
